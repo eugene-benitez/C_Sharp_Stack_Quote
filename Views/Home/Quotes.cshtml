@@ -1,0 +1,26 @@
+@using Quote.Models
+@model Qt
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="~/css/style.css"/>
+    <title>Quoting Dojo</title>
+</head>
+<body>
+<div class="wrapper">
+    <div>
+        @foreach (var q in @ViewBag.Users)
+        {
+            <h2>@q["Name"]</h2>
+            <h2>@q["Text"]</h2>
+            <h2>@q["Created_At"]</h2>
+            <br>
+        }
+    </div>
+</div>
+</body>
+</html>
